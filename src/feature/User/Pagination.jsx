@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   .btn-container {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .active {
