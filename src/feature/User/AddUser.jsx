@@ -43,7 +43,7 @@ const AddUser = () => {
       toast.success("Thanks for Register");
       reset();
       navigate("viewuser");
-      queryClient.invalidateQueries({ queryKey: ["alluser"] });
+      queryClient.invalidateQueries({ queryKey: ["allusers"] });
     },
   });
 

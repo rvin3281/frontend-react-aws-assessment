@@ -41,8 +41,17 @@ const Box = styled.div`
   .userAction {
     display: flex;
     gap: 0.2rem;
+
     a {
       color: white;
+      padding: 0.5rem 1.5rem;
+      background-color: red;
+      transition: 0.3s ease-in-out all;
+
+      &:hover {
+        background-color: #ffcbcb;
+        color: black;
+      }
     }
 
     button {
@@ -90,9 +99,8 @@ const ViewAllUserList = ({ id, username, hobby, skillset }) => {
           <p>{hobby}</p>
         </div>
         <div className="userAction">
-          <button>
-            <Link to={`/dashboard/edit-job/${id}`}>Edit</Link>
-          </button>
+          <Link to={`/dashboard/edit-job/${id}`}>Edit</Link>
+
           <button onClick={handleDelete}>Delete</button>
         </div>
       </Box>
